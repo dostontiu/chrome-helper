@@ -1,0 +1,16 @@
+{
+  "name": "Scheduled Number Extension",
+  "version": "1.0",
+  "description": "This extension shows a scheduled number for every search result on the Google search engine, and opens a new window when you press a key on the keyboard.",
+  "manifest_version": 2,
+  "content_scripts": [
+    {
+      "matches": ["*://www.google.com/*"],
+      "js": ["jquery.min.js", "content-script.js"]
+    }
+  ],
+  "browser_action": {
+    "default_popup": "popup.html"
+  },
+  "permissions": ["activeTab"]
+}
